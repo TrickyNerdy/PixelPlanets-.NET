@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://clqvlybt45o7r"]
 
-[ext_resource type="Script" path="res://Planets/Star/Star.gd" id="1"]
+[ext_resource type="Script" path="res://Planets/Star/Star.cs" id="1_m8wxf"]
 [ext_resource type="Shader" path="res://Planets/Star/StarBlobs.gdshader" id="2"]
 [ext_resource type="Shader" path="res://Planets/Star/StarFlares.gdshader" id="3"]
 [ext_resource type="Shader" path="res://Planets/Star/Star.gdshader" id="4"]
@@ -61,9 +61,7 @@ grow_vertical = 2
 pivot_offset = Vector2(100, 100)
 size_flags_horizontal = 0
 size_flags_vertical = 0
-script = ExtResource("1")
-relative_scale = 2.0
-gui_zoom = 2.0
+script = ExtResource("1_m8wxf")
 
 [node name="Blobs" type="ColorRect" parent="."]
 material = SubResource("1")

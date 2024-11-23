@@ -5,13 +5,14 @@ using Dictionary = Godot.Collections.Dictionary;
 using Array = Godot.Collections.Array;
 
 
-public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\GUI\ImportExportPopup : ColorRect
+public class ImportExportPopup : ColorRect
 {
 	 
-	public signal set_colors;
 	
-	@onready var textedit = GetNode("PopupFront/HBoxContainer/VBoxContainer/TextEdit");
-	@onready var apply_button = GetNode("PopupFront/HBoxContainer/VBoxContainer2/ApplyColors");
+	public var textedit = GetNode("PopupFront/HBoxContainer/VBoxContainer/TextEdit");
+	public var apply_button = GetNode("PopupFront/HBoxContainer/VBoxContainer2/ApplyColors");
+	
+
 	
 	public __TYPE current_colors = new Array(){};
 	

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" path="res://Planets/Planet.tscn" id="1"]
 [ext_resource type="Shader" path="res://Planets/Galaxy/Galaxy.gdshader" id="2"]
-[ext_resource type="Script" path="res://Planets/Galaxy/Galaxy.gd" id="3"]
+[ext_resource type="Script" path="res://Planets/Galaxy/Galaxy.cs" id="2_60rkj"]
 
 [sub_resource type="ShaderMaterial" id="4"]
 shader = ExtResource("2")
@@ -31,8 +31,7 @@ offset_right = -412.0
 offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3")
-gui_zoom = 2.5
+script = ExtResource("2_60rkj")
 
 [node name="Galaxy" type="ColorRect" parent="." index="0"]
 material = SubResource("4")

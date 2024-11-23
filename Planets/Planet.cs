@@ -5,7 +5,7 @@ using Dictionary = Godot.Collections.Dictionary;
 using Array = Godot.Collections.Array;
 
 
-public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\Planets\Planet : Control
+public class Planet : Control
 {
 	 
 	public __TYPE time = 1000.0;
@@ -104,7 +104,7 @@ public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\Planets\Pl
 		Vector3 d = new Vector3(randf_range(0.0, 1.0), randf_range(0.0, 1.0), randf_range(0.0, 1.0)) * randf_range(1.0, 3.0);
 	
 		var cols = PackedColorArray();
-		var n = (float)(n_colors - 1.0)
+		var n = (float)(n_colors - 1.0);
 		n = Mathf.Max(1, n);
 		foreach(var i in GD.Range(0, n_colors, 1))
 		{

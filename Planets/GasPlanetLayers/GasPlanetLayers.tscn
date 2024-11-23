@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b47dpsuy2ch3g"]
 
 [ext_resource type="PackedScene" path="res://Planets/Planet.tscn" id="1"]
-[ext_resource type="Script" path="res://Planets/GasPlanetLayers/GasPlanetLayers.gd" id="2"]
+[ext_resource type="Script" path="res://Planets/GasPlanetLayers/GasPlanetLayers.cs" id="2_chglv"]
 [ext_resource type="Shader" path="res://Planets/GasPlanetLayers/Ring.gdshader" id="3"]
 [ext_resource type="Shader" path="res://Planets/GasPlanetLayers/GasLayers.gdshader" id="4"]
 
@@ -53,9 +53,7 @@ offset_right = -412.0
 offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2")
-relative_scale = 3.0
-gui_zoom = 2.5
+script = ExtResource("2_chglv")
 
 [node name="GasLayers" type="ColorRect" parent="." index="0"]
 material = SubResource("5")

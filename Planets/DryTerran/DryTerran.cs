@@ -5,7 +5,7 @@ using Dictionary = Godot.Collections.Dictionary;
 using Array = Godot.Collections.Array;
 
 
-public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\Planets\DryTerran\DryTerran : "res://Planets/Planet.gd"
+public class DryTerran
 {
 	 
 	public void set_pixels(__TYPE amount)

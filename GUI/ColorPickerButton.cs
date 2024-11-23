@@ -5,7 +5,7 @@ using Dictionary = Godot.Collections.Dictionary;
 using Array = Godot.Collections.Array;
 
 
-public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\GUI\ColorPickerButton : Button
+public class ColorPickerButton : Button
 {
 	 
 	public signal color_picked;
@@ -15,7 +15,7 @@ public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\GUI\ColorP
 	public __TYPE own_color;
 	public __TYPE is_active = false;
 	
-	public void _ready()
+	public override void _Ready()
 	{  
 		
 		add_theme_stylebox_override("normal", get_theme_stylebox("normal"));

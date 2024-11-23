@@ -5,26 +5,26 @@ using Dictionary = Godot.Collections.Dictionary;
 using Array = Godot.Collections.Array;
 
 
-public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\GUI\GUI : Control
+public class GUI: Control
 {
-	 
-	@onready var viewport = GetNode("PlanetViewport");
-	@onready var viewport_planet = GetNode("PlanetViewport/PlanetHolder");
-	@onready var viewport_holder = GetNode("HBoxContainer/PlanetHolder");
-	@onready var viewport_tex = GetNode("HBoxContainer/PlanetHolder/ViewportTexture");
-	@onready var seedtext = GetNode("HBoxContainer/Settings/VBoxContainer/Seed/SeedText");
-	@onready var optionbutton = GetNode("HBoxContainer/Settings/VBoxContainer/OptionButton");
-	@onready var colorholder = GetNode("HBoxContainer/Settings/VBoxContainer/ColorButtonHolder");
-	@onready var picker = GetNode("Panel/ColorPicker");
-	@onready var random_colors = GetNode("HBoxContainer/Settings/VBoxContainer/HBoxContainer/RandomizeColors");
-	@onready var dither_button = GetNode("HBoxContainer/Settings/VBoxContainer/HBoxContainer2/ShouldDither");
-	@onready var layeroptions = GetNode("HBoxContainer/Settings/VBoxContainer/LayerOptions");
-	
-	@onready var colorbutton_scene = GD.Load("res://GUI/ColorPickerButton.tscn");
-	public const var GIFExporter = GD.Load("res://addons/gdgifexporter/exporter.gd");
-	public const var MedianCutQuantization = GD.Load("res://addons/gdgifexporter/quantization/median_cut.gd");
-	
-	@onready Dictionary planets = new Dictionary(){
+		public Node viewport = GetNode("PlanetViewport");
+		public Node viewport_planet = GetNode("PlanetViewport/PlanetHolder");
+		public Node viewport_holder = GetNode("HBoxContainer/PlanetHolder");
+		public Node viewport_tex = GetNode("HBoxContainer/PlanetHolder/ViewportTexture");
+		public Node seedtext = GetNode("HBoxContainer/Settings/VBoxContainer/Seed/SeedText");
+		public Node optionbutton = GetNode("HBoxContainer/Settings/VBoxContainer/OptionButton");
+		public Node colorholder = GetNode("HBoxContainer/Settings/VBoxContainer/ColorButtonHolder");
+		public Node picker = GetNode("Panel/ColorPicker");
+		public Node random_colors = GetNode("HBoxContainer/Settings/VBoxContainer/HBoxContainer/RandomizeColors");
+		public Node dither_button = GetNode("HBoxContainer/Settings/VBoxContainer/HBoxContainer2/ShouldDither");
+		public Node layeroptions = GetNode("HBoxContainer/Settings/VBoxContainer/LayerOptions");
+		public
+		public Nodes colorbutton_scene = GD.Load("res://GUI/ColorPickerButton.tscn");
+		public const var GIFExporter = GD.Load("res://addons/gdgifexporter/exporter.gd");
+		public const var MedianCutQuantization = GD.Load("res://addons/gdgifexporter/quantization/median_cut.gd");
+
+
+		public Dictionary planets = new Dictionary(){
 		{"Terran Wet", GD.Load("res://Planets/Rivers/Rivers.tscn")},
 		{"Terran Dry", GD.Load("res://Planets/DryTerran/DryTerran.tscn")},	
 		{"Islands", GD.Load("res://Planets/LandMasses/LandMasses.tscn")},
@@ -36,8 +36,10 @@ public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\GUI\GUI : 
 		{"Asteroid", GD.Load("res://Planets/Asteroids/Asteroid.tscn")},
 		{"Black Hole", GD.Load("res://Planets/BlackHole/BlackHole.tscn")},
 		{"Galaxy", GD.Load("res://Planets/Galaxy/Galaxy.tscn")},
-		{"Star", GD.Load("res://Planets/Star/Star.tscn")},
-	};
+		{"Star", GD.Load("res://Planets/Star/Star.tscn")}
+		}
+	 
+	
 	public __TYPE pixels = 100.0;
 	public __TYPE sd = 0;
 	public __TYPE colors = new Array(){};

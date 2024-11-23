@@ -1,9 +1,6 @@
-res://GUI/GUI.gd
-res://GUI/SpritesheetPopup.gd
-res://addons/gdgifexporter/converter.gd
-res://addons/gdgifexporter/exporter.gd
-res://addons/gdgifexporter/little_endian.gd
-res://addons/gdgifexporter/gif-lzw/lsbbitpacker.gd
-res://addons/gdgifexporter/gif-lzw/lsbbitunpacker.gd
-res://addons/gdgifexporter/gif-lzw/lzw.gd
-res://addons/gdgifexporter/quantization/median_cut.gd
+res://default_env.tres
+res://GUI/GUI.tscn
+res://GUI/Theme.tres
+res://GUI/StarParticles.tres
+res://Planets/Rivers/Rivers.tscn
+res://GUI/ColorPickerButton.tscn

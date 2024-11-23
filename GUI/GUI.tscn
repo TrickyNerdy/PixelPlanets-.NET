@@ -1,16 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://do1rqlsl7j8w1"]
+[gd_scene load_steps=22 format=3 uid="uid://do1rqlsl7j8w1"]
 
-[ext_resource type="Script" path="res://GUI/GUI.gd" id="1"]
+[ext_resource type="Script" path="res://GUI/GUI.cs" id="1_ayovf"]
 [ext_resource type="Theme" uid="uid://bv2fro5jwglrq" path="res://GUI/Theme.tres" id="2"]
+[ext_resource type="Script" path="res://GUI/Light3d.cs" id="2_ttfta"]
 [ext_resource type="PackedScene" uid="uid://crdxh2i35dorc" path="res://Planets/Rivers/Rivers.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://rso35gm4eqyp" path="res://stars.png" id="4"]
-[ext_resource type="Script" path="res://GUI/SpritesheetPopup.gd" id="5"]
 [ext_resource type="Texture2D" uid="uid://csvjlkmt71tp0" path="res://GUI/progress-under.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://c3dko8im0fvb5" path="res://GUI/progress-over.png" id="7"]
 [ext_resource type="PackedScene" uid="uid://blrnap0k35tav" path="res://GUI/ColorPickerButton.tscn" id="8"]
 [ext_resource type="Material" uid="uid://bhb7yqvdm2fuf" path="res://GUI/StarParticles.tres" id="9"]
-[ext_resource type="Script" path="res://GUI/GifPopup.gd" id="10"]
-[ext_resource type="Script" path="res://GUI/ImportExportPopup.gd" id="11"]
+[ext_resource type="Script" path="res://GUI/SpritesheetPopup.cs" id="9_j4etr"]
+[ext_resource type="Script" path="res://GUI/ImportExportPopup.cs" id="12_ens2s"]
+[ext_resource type="Script" path="res://GUI/GifPopup.cs" id="13_3cccn"]
 
 [sub_resource type="Shader" id="1"]
 code = "shader_type canvas_item;
@@ -109,7 +110,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1")
+script = ExtResource("1_ayovf")
 
 [node name="Light3D" type="ColorRect" parent="."]
 material = SubResource("2")
@@ -119,6 +120,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_ttfta")
 
 [node name="Dark" type="ColorRect" parent="."]
 layout_mode = 1
@@ -313,6 +315,9 @@ layout_mode = 2
 theme_override_styles/hover = SubResource("StyleBoxFlat_k4bca")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8jpl7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3ofrx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k4bca")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8jpl7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ofrx")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Settings/VBoxContainer"]
 layout_mode = 2
@@ -387,7 +392,7 @@ layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0.172549, 0.207843, 0.301961, 0.596078)
-script = ExtResource("5")
+script = ExtResource("9_j4etr")
 
 [node name="PopupFront" type="ColorRect" parent="Popup"]
 layout_mode = 0
@@ -515,7 +520,7 @@ layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0.172549, 0.207843, 0.301961, 0.596078)
-script = ExtResource("11")
+script = ExtResource("12_ens2s")
 
 [node name="PopupFront" type="ColorRect" parent="ImportExportPopup"]
 layout_mode = 0
@@ -604,7 +609,7 @@ layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0.172549, 0.207843, 0.301961, 0.596078)
-script = ExtResource("10")
+script = ExtResource("13_3cccn")
 
 [node name="PopupFront" type="ColorRect" parent="GifPopup"]
 layout_mode = 0
@@ -776,7 +781,6 @@ presets_visible = false
 [connection signal="pressed" from="ImportExportPopup/PopupFront/HBoxContainer/VBoxContainer2/CopyToClipboard" to="ImportExportPopup" method="_on_CopyToClipboard_pressed"]
 [connection signal="pressed" from="ImportExportPopup/PopupFront/HBoxContainer/VBoxContainer2/PasteFromClipboard" to="ImportExportPopup" method="_on_PasteFromClipboard_pressed"]
 [connection signal="pressed" from="ImportExportPopup/PopupFront/HBoxContainer/VBoxContainer2/ApplyColors" to="ImportExportPopup" method="_on_ApplyColors_pressed"]
-[connection signal="cancel_gif" from="GifPopup" to="." method="_on_GifPopup_cancel_gif"]
 [connection signal="value_changed" from="GifPopup/PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/GifFrameCount" to="GifPopup" method="_on_GifFrameCount_value_changed"]
 [connection signal="value_changed" from="GifPopup/PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/GifTime" to="GifPopup" method="_on_GifTime_value_changed"]
 [connection signal="value_changed" from="GifPopup/PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/FrameDelay" to="GifPopup" method="_on_FrameDelay_value_changed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwvk0bdbotelo"]
 
-[ext_resource type="Script" path="res://Planets/GasPlanet/GasPlanet.gd" id="1"]
+[ext_resource type="Script" path="res://Planets/GasPlanet/GasPlanet.cs" id="1_fimfd"]
 [ext_resource type="Shader" path="res://Planets/GasPlanet/GasPlanet.gdshader" id="2"]
 
 [sub_resource type="ShaderMaterial" id="1"]
@@ -47,7 +47,7 @@ offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(100, 100)
-script = ExtResource("1")
+script = ExtResource("1_fimfd")
 
 [node name="Cloud" type="ColorRect" parent="."]
 material = SubResource("1")

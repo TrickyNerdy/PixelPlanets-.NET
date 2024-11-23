@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" path="res://Planets/Planet.tscn" id="1"]
 [ext_resource type="Shader" path="res://Planets/LandMasses/PlanetUnder.gdshader" id="2"]
-[ext_resource type="Script" path="res://Planets/IceWorld/IceWorld.gd" id="3"]
+[ext_resource type="Script" path="res://Planets/IceWorld/IceWorld.cs" id="2_yp7tw"]
 [ext_resource type="Shader" path="res://Planets/LandMasses/Clouds.gdshader" id="4"]
 
 [sub_resource type="ShaderMaterial" id="1"]
@@ -160,7 +160,7 @@ offset_right = -412.0
 offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3")
+script = ExtResource("2_yp7tw")
 
 [node name="Land" type="ColorRect" parent="." index="0"]
 material = SubResource("1")

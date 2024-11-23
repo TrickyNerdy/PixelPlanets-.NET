@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://chh0bjjvjt2v8"]
 
 [ext_resource type="Shader" path="res://Planets/LandMasses/PlanetUnder.gdshader" id="1"]
+[ext_resource type="Script" path="res://Planets/LandMasses/LandMasses.cs" id="1_n0moq"]
 [ext_resource type="Shader" path="res://Planets/LandMasses/Clouds.gdshader" id="2"]
 [ext_resource type="Shader" path="res://Planets/LandMasses/PlanetLandmass.gdshader" id="3"]
-[ext_resource type="Script" path="res://Planets/LandMasses/LandMasses.gd" id="4"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("1")
@@ -65,7 +65,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-script = ExtResource("4")
+script = ExtResource("1_n0moq")
 
 [node name="Water" type="ColorRect" parent="."]
 material = SubResource("1")

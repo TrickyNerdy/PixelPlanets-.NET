@@ -5,19 +5,20 @@ using Dictionary = Godot.Collections.Dictionary;
 using Array = Godot.Collections.Array;
 
 
-public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\GUI\SpritesheetPopup : ColorRect
+public class SpritesheetPopup : ColorRect
 {
-	 
-	@onready var w_frames = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/WidthFrames");
-	@onready var h_frames = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/HeightFrames");
-	@onready var export_button = GetNode("PopupFront/VBoxContainer/HBoxContainer/ExportButton");
-	@onready var r_info = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer2/ResolutionInfo");
-	@onready var f_info = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer2/FrameInfo");
-	@onready var warning = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer2/WarningResolution");
-	@onready var progressbar = GetNode("PopupFront/VBoxContainer/TextureProgressBar");
-	public __TYPE pixels = 100;
-	public __TYPE sheet_size = new Vector2(50,3);
-	public __TYPE pixel_margin = 0.0;
+	public var w_frames = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/WidthFrames");
+	public var h_frames = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/HeightFrames");
+	public var export_button = GetNode("PopupFront/VBoxContainer/HBoxContainer/ExportButton");
+	public var r_info = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer2/ResolutionInfo");
+	public var f_info = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer2/FrameInfo");
+	public var warning = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer2/WarningResolution");
+	public var progressbar = GetNode("PopupFront/VBoxContainer/TextureProgressBar");
+	
+
+	public int pixels = 100;
+	public var sheet_size = new Vector2(50,3);
+	public float pixel_margin = 0.0;
 	
 	public void _on_CancelButton_pressed()
 	{  

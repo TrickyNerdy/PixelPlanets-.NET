@@ -5,22 +5,19 @@ using Dictionary = Godot.Collections.Dictionary;
 using Array = Godot.Collections.Array;
 
 
-public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\GUI\GifPopup : ColorRect
+public class GifPopup : ColorRect
 {
-	 
-	signal cancel_gif
+
+	public Node set_delay = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/FrameDelay");
+	public Node export_button = GetNode("PopupFront/VBoxContainer/HBoxContainer/ExportButton");
+	public Node progressbar = GetNode("PopupFront/VBoxContainer/TextureProgressBar");
+	public Node set_framecount = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/GifFrameCount");
+	public Node set_giftime = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/GifTime");
+	public Node set_delay = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/FrameDelay");
+	public int frames = 600;
+	public int length = 10;
+	public float frame_delay = 10.0f / 600.0;
 	
-	
-	@onready var export_button = GetNode("PopupFront/VBoxContainer/HBoxContainer/ExportButton");
-	@onready var progressbar = GetNode("PopupFront/VBoxContainer/TextureProgressBar");
-	@onready var set_framecount = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/GifFrameCount");
-	@onready var set_giftime = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/GifTime");
-	@onready var set_delay = GetNode("PopupFront/VBoxContainer/SpritesheetSettings/VBoxContainer/FrameDelay");
-	
-	
-	@onready int frames = 600;
-	@onready int length = 10;
-	@onready float frame_delay = 10.0f / 600.0;
 	
 	public void _on_CancelButton_pressed()
 	{  
@@ -32,7 +29,7 @@ public class \Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\GUI\GifPop
 	public void _on_ExportButton_pressed()
 	{  
 		progressbar.visible = true;
-		get_parent().export_gif(frames, frame_delay, progressbar)
+		get_parent().export_gif(frames, frame_delay, progressbar);
 	
 	}
 	

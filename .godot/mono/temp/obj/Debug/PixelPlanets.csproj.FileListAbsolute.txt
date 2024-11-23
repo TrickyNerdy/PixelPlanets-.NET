@@ -1,0 +1,5 @@
+C:\Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\.godot\mono\temp\obj\Debug\PixelPlanets.csproj.AssemblyReference.cache
+C:\Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\.godot\mono\temp\obj\Debug\PixelPlanets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\.godot\mono\temp\obj\Debug\PixelPlanets.AssemblyInfoInputs.cache
+C:\Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\.godot\mono\temp\obj\Debug\PixelPlanets.AssemblyInfo.cs
+C:\Users\Trick\OneDrive\Documents\GitHub\PixelPlanets-.NET\.godot\mono\temp\obj\Debug\PixelPlanets.csproj.CoreCompileInputs.cache
